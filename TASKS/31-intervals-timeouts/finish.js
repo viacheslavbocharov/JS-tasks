@@ -12,3 +12,24 @@
  * "Сообщение номер 4"
  * "Сообщение номер 5"
  */
+
+
+//option 1
+let index = 1
+const interval = setInterval(() => {
+    if (index === 5) {
+        clearInterval(interval)
+    }
+    console.log(`Message number ${index}`)
+    ++index
+}, 2000)
+
+
+//option 2
+// let index = 1
+// const interval = setInterval(() => {
+//     console.log(`Message number ${index}`)
+//     ++index
+// }, 2000)
+
+// setTimeout(() => clearInterval(interval), 11000)

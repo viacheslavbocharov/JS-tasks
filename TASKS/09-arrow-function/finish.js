@@ -10,3 +10,12 @@
  *
  * 5. Перепишите функцию так, чтобы результат возвращался неявно
  */
+
+const myFunc = () => {
+    return 'Hi, world!'
+}
+
+const myFunc2 = () => 'Hi, world! 2'
+
+console.log(myFunc())
+console.log(myFunc2())

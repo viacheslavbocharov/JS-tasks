@@ -18,4 +18,4 @@ function myFn2(a) {
   console.log(a, b, c, d)
 }
 
-myFn1()
+myFn1()// undifined, 2, 5, 10

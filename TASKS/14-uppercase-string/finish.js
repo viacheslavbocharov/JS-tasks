@@ -12,3 +12,12 @@
  *
  * 5. Выведите в консоль значение второй переменной
  */
+
+
+const str = 'I\'m developer'
+
+
+if (!(str instanceof String) && typeof(str) === 'string') {
+    const newStr = str.toUpperCase()
+    console.log(newStr)
+}

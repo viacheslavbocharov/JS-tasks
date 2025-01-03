@@ -3,6 +3,7 @@
  * 1. Создайте функцию "createGreeting", внутри которой создайте:
  *  - переменную "greetingString" с значением "Hey, this is"
  *    (объявите ее используя "let")
+ * 
  *  - функцию "greet" с одним параметром, которая должна возвращать
  *    строку-приветствие на основании "greetingString" и параметра,
  *    например, "Hey, this is Bob"
@@ -13,6 +14,23 @@
  *  - greet
  *  - changeGreeting
  */
+
+function createGreeting() {
+    let greetingString = 'Hey, this is'
+
+    function greet(name) {
+        return `${greetingString} ${name}`
+    }
+
+    function changeGreeting(newGreeting) {
+        greetingString = newGreeting
+    }
+
+    return {
+        greet,
+        changeGreeting
+    }
+}
 
 const greeting1 = createGreeting()
 

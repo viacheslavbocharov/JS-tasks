@@ -12,3 +12,14 @@
  *
  * 4. Вызовите функцию
  */
+
+
+/**
+ * "Возвращает разницу двух чисел"
+ * @param {number} val1 
+ * @param {number} val2 
+ * @returns {number} разницу чисел
+ */
+const subFunc = (val1, val2) => val1 - val2
+
+console.log(subFunc(10, 5))

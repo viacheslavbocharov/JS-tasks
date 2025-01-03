@@ -10,3 +10,21 @@
  */
 
 const myCities = ['London', 'New York', 'Singapore']
+
+const cityInfo = (arr, cityName) => {
+    if (arr.includes(cityName)) {
+        const index = arr.indexOf(cityName)
+        return console.log(`${cityName} is at the index ${index} in the myCities array`)
+    }
+    return console.log(`There is no "${cityName}" in the array`)
+}
+
+
+
+
+const cityInfo2 = (city, index) =>
+    console.log(`${city} is at the index ${index} in the myCities array`)
+
+myCities.forEach((city, index) => cityInfo2(city, index))
+
+cityInfo(myCities, 'Belfast')

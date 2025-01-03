@@ -10,3 +10,10 @@
  *
  * 3. Выведите значение последней переменной в консоль
  */
+
+const name = 'Slava'
+const surname = 'Bocharov'
+const profession = 'developer'
+
+const aboutMe = `My name is ${name} ${surname} and I'm ${profession}`
+console.log(aboutMe)

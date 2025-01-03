@@ -34,6 +34,14 @@ const inputProducts = [
   },
 ]
 
+const quantitiesByCategories = (products) => {
+  return products.reduce((acc, product) => {
+    const {category, quantity} = product
+    acc[category] ? (acc[category] += quantity) : (acc[category] = quantity)
+    return acc
+  }, {})
+}
+
 console.log(quantitiesByCategories(inputProducts))
 /* {
   Accessories: 3,

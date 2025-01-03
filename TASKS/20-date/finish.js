@@ -4,3 +4,7 @@
  *
  * 2. Выведите значение в консоль
  */
+
+
+const currentDataMs = new Date()
+console.log(currentDataMs.getTime())

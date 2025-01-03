@@ -14,7 +14,28 @@
  *  - для добавления случайного числа в массив с возвратом измененного массива
  */
 
+
 const MIN = 1000
 const MAX = 9999
 
 const myNumbers = [2355, 7235, 8135, 1762, 2361, 8351]
+
+const getRandomInt = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+
+
+const addUnicNumberToArr = (arr, min, max) => {
+    const newNumber = getRandomInt(min, max)
+    const newArr = [...arr]
+    if (!arr.includes(newNumber)) {
+        newArr.push(newNumber)
+        return newArr
+    } else {
+        addUnicNumberToArr()
+    }
+}
+
+const updatedArr = addUnicNumberToArr(myNumbers, MIN, MAX)
+console.log('Orgin arr: ' + myNumbers)
+console.log('Updated arr: ' + updatedArr)

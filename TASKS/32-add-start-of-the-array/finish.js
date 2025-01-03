@@ -8,7 +8,10 @@
  */
 
 const myArray = [true, null]
+myArray.unshift(100, 'Hello')
+
 
 // Напишите код здесь
 
 console.log(myArray) // [100, "Hello", true, null]
+console.log(myArray.length)

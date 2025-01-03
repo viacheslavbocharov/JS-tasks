@@ -8,21 +8,21 @@
 
 15
 
-const myObject = {
+const myObject = { //statment
   x: 10,
   y: true,
 }
 
-myObject.z = 'abc'
+myObject.z = 'abc' //expression
 
-delete myObject.x
+delete myObject.x //statment
 
-let newVariable
+let newVariable //expression
 
-newVariable = 30 + 5
+newVariable = 30 + 5 //expression
 
-console.log(newVariable)
+console.log(newVariable) //expression-statmenbt
 
-if (newVariable > 10) {
-  console.log(`${newVariable} больше 10`)
+if (newVariable > 10) { //statmebt
+  console.log(`${newVariable} больше 10`)//expression-statmenbt
 }

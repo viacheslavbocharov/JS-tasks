@@ -17,6 +17,9 @@ let person = {
   cartId: 435,
 }
 
+let {index, email, name, cartId } = person
+person = {index, email, name, cartId }
+
 console.log(person)
 /*
 {

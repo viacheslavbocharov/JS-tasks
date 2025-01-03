@@ -4,3 +4,7 @@
  *
  * 2. Виведите в консоль длину этой строки
  */
+
+const someString = 'Hellow world!'
+
+console.log(someString.length)

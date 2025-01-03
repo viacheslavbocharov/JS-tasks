@@ -7,3 +7,24 @@
  *
  * 3. Создайте многострочный комментарий
  */
+
+
+// thIs is one line comment
+const x = 5 //this is acomment
+
+/*this
+is
+a
+multiline
+comment*/ 
+
+/**fdsfsd;f
+ * ;fdmsf;ldms
+ * f;sdkfnmdsm;f
+ * flsdmf;lds
+ */
+
+/*fsflksmflsm
+sfosoasf
+fsaofn/aso
+d;faso*/

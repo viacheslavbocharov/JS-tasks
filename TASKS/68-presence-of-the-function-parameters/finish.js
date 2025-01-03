@@ -5,13 +5,23 @@
  * "Функция "square" не может быть вызвана без аргумента"
  */
 
+
 function square(a) {
+  
+  if(typeof a === 'undefined') {
+    throw new Error('Функция "square" не может быть вызвана без аргумента')
+  }
   console.log(a * a)
 }
 
-square(10)
+
+try {
+  square(10)
+  square()  
+} catch (error) {
+  console.log(error.message)
+}
 // 100
 
-square()
 // ДО: NaN
 // ПОСЛЕ: Uncaught Error: Функция "square" не может быть вызвана без аргумента

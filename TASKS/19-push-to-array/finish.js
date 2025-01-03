@@ -6,3 +6,11 @@
  *
  * 3. Выведите в консоль длину результирующего массива
  */
+
+const arr = [1, 'String', null]
+
+arr.push('new element')
+arr.push(5, 100, 'la')
+
+console.log(arr.length)
+console.log(arr)

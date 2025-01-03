@@ -11,3 +11,29 @@
  *
  * 4. Выведите результирующий массив в консоль
  */
+
+const cars = [
+    {
+        carBrand: 'BMW',
+        price: 20000,
+        isAvailableForSale: true
+    },
+    {
+        carBrand: 'Mercedes',
+        price: 22000,
+        isAvailableForSale: false
+    },
+    {
+        carBrand: 'Toyota',
+        price: 12000,
+        isAvailableForSale: true
+    }
+]
+
+cars.push({
+    carBrand: 'Ford',
+    price: 7000,
+    isAvailableForSale: false
+})
+
+console.log(cars.length)

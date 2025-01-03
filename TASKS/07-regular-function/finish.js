@@ -8,3 +8,9 @@
  *
  * 4. Вызовите функцию
  */
+
+function showMyName () {
+    console.log('Slava')
+}
+
+showMyName()

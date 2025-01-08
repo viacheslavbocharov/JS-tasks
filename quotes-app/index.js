@@ -8,7 +8,6 @@ function setCurrentQuote(quote) {
   currentQuote = quote;
 }
 
-
 const favoritesContainer = document.getElementById('favorites-container');
 const favoriteBtn = document.getElementById('favorite-btn');
 hideFavoriteBtn(favoriteBtn);

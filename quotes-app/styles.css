@@ -6,7 +6,7 @@ body {
 
 .container {
   max-width: 600px;
-  margin: 50px auto;
+  margin: 20px auto;
   text-align: center;
 }
 
@@ -24,17 +24,25 @@ body {
   background-color: #0056b3;
 }
 
-/* #author {
-  margin-top: 10px;
-} */
-
 .quote {
-  font-style: italic;
+  font-size: 1.2em;
 }
 
-.quote::before,
-.quote::after {
+
+.quote-text {
+  font-style: italic;
+  min-height: 2.3em;
+  margin-block-end: 0.7em;
+}
+
+.quote-text::before,
+.quote-text::after {
   content: '"';
+}
+
+.quote-author {
+  font-weight: bold;
+  margin-block-start: 0.7em;
 }
 
 .btn {
@@ -46,7 +54,7 @@ body {
   border-radius: 10px;
 }
 
-/* .btn-primary {
+.btn-primary {
   background-color: #007bff;
 }
 
@@ -65,21 +73,6 @@ body {
   color: white;
 }
 
-.quote {
-  font-size: 1.2em;
-}
-
-.quote-text {
-  font-style: italic;
-  min-height: 2.3em;
-  margin-block-end: 0.7em;
-}
-
-.quote-author {
-  font-weight: bold;
-  margin-block-start: 0.7em;
-} */
-
 .favorites-container {
   display: flex;
   flex-wrap: wrap;
@@ -89,6 +82,7 @@ body {
 .favorite-card {
   display: flex;
   flex-direction: column;
+  /* justify-content: space-between; */
   background-color: #f9f9f9;
   color: darkslategray;
   padding: 10px 20px;
@@ -99,12 +93,13 @@ body {
 
 .favorite-card-content {
   flex: 1;
-  padding: 0px 3px;
+  padding: 0 3px;
 }
 
 .favorite-card-author {
   font-style: italic;
 }
+
 
 .star-icon {
   font-size: 30px;

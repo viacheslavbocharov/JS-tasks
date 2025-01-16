@@ -23,7 +23,7 @@ class RandomQuotesApp {
     }
   }
 
-  getRandomQuote() {
+  randomQuoteHandler() {
     this.changeCurrentQuote(RandomQuote.getRandomQuote());
   }
 
@@ -33,14 +33,16 @@ class RandomQuotesApp {
   //   );
   // }
 
-  async getRandomQuoteViaAPI() {
+  async randomQuoteViaAPIHandler() {
     this.changeCurrentQuote(await RandomQuote.getRandomQuoteViaAPI());
   }
 
   init() {
-    this.randomQuoteBtn.addEventListener('click', () => this.getRandomQuote());
+    this.randomQuoteBtn.addEventListener('click', () =>
+      this.randomQuoteHandler()
+    );
     this.randomQuoteApiBtn.addEventListener('click', () =>
-      this.getRandomQuoteViaAPI()
+      this.randomQuoteViaAPIHandler()
     );
   }
 }

@@ -1,6 +1,7 @@
 import quotes from '../data/quotes.js';
 import MathUtils from '../utils/MathUtils.js';
 import Quote from './Quote.js';
+import config from '../config.js';
 
 class RandomQuote {
   static getRandomQuote() {
@@ -15,7 +16,7 @@ class RandomQuote {
   //результат fulfilled promise будет Quote or undefined
   //Terefore no need try/catch block where we call this function
   static async getRandomQuoteViaPublicAPI() {
-    const url = 'https://quoteslate.vercel.app/api/quotes/random';
+    const url = `${config.PUBLIC_API_URL}/api/quotes/random`;
     const options = { headers: { 'Content-Type': 'application/json' } };
     try {
       const res = await fetch(url, options);
@@ -30,7 +31,7 @@ class RandomQuote {
   }
 
   static async getRandomQuoteViaOwnAPI() {
-    const url = 'http://localhost:3000/api/quotes/random-single';
+    const url = `${config.API_URL}/api/quotes/random-single`;
     const options = { headers: { 'Content-Type': 'application/json' } };
     try {
       const res = await fetch(url, options);

@@ -14,7 +14,7 @@ class RandomQuote {
   //Promice возвращаемый фнкцией будет всегда fulfilled потому что отлавливаем все возможные ошибки
   //результат fulfilled promise будет Quote or undefined
   //Terefore no need try/catch block where we call this function
-  static async getRandomQuoteViaAPI() {
+  static async getRandomQuoteViaPublicAPI() {
     const url = 'https://quoteslate.vercel.app/api/quotes/random';
     const options = { headers: { 'Content-Type': 'application/json' } };
     try {
@@ -26,6 +26,19 @@ class RandomQuote {
     } catch (error) {
       console.error(error);
       // catch возвращаеет неявно undefinde(resolves promise to undefined)
+    }
+  }
+
+  static async getRandomQuoteViaOwnAPI() {
+    const url = 'http://localhost:3000/api/quotes/random-single';
+    const options = { headers: { 'Content-Type': 'application/json' } };
+    try {
+      const res = await fetch(url, options);
+      const data = await res.json();
+      const { id, text, author } = data;
+      return new Quote(id, text, author);
+    } catch (error) {
+      console.error(error);
     }
   }
 }
